@@ -16,10 +16,7 @@ def get_video_info(video_url):
     ydl_opts = {
         'quiet': True,
         'format': 'bestaudio[ext=m4a]/bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-        # 'postprocessors': [{
-        #     'key': 'FFmpegVideoConvertor',
-        #     'preferedformat': 'mp4'
-        # }]
+        'cookies': 'cookies.txt'
     }
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
