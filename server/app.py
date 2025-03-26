@@ -3,7 +3,7 @@ import yt_dlp
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:3000"])
 
 def get_video_info(video_url):
     ydl_opts = {
